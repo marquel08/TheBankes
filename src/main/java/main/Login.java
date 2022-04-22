@@ -69,7 +69,7 @@ public class Login {
 				}
 			}
 			
-		} while (!scannerCheck.equals("5"));
+		} while (!scannerCheck.equals("7"));
 		
 		System.out.println("\nThank you for using The Bankers banking app. Have a nice day.\n");
 		App.mainCaller();

@@ -13,9 +13,9 @@ System.out.println("Please enter one of the following commands: ");
 		
 		do {
 			System.out.println("1 - MANAGE USERS"
-				+ "2 - VIEW ALL ACCOUNTS"
-				+ "3 - SEND OVERDRAFT INVOICE"
-				+ "4 - LOGOUT");
+				+ "\n2 - VIEW ALL ACCOUNTS"
+				+ "\n3 - SEND OVERDRAFT INVOICE"
+				+ "\n4 - LOGOUT");
 			
 			scannerCheck = scannerInput.nextLine();
 			
