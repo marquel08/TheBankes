@@ -6,11 +6,10 @@ public class Login {
 	
 	static Scanner scannerInput = new Scanner(System.in);
 	static String scannerCheck;
-	static int scannerNumber;
+	static Scanner scannerNumber = new Scanner(System.in);
 	
 	
-	static double checkingBalance = 0; //hard-coded; get from DB
-	static double savingsBalance = 0; //hard-coded; get from DB
+	static double accBalance = 0; //hard-coded; get from DB
 	static double withdrawDeposit;
 
 	public static void loginScreen() {
@@ -32,23 +31,37 @@ public class Login {
 				
 			// 1 - VIEW BALANCE
 				case "1": {
-					System.out.println("Your current checking account balance is $" + checkingBalance + "."
-							+ "\nYour current savings account balance is $" + savingsBalance + ".");
+					System.out.println("Your current account balance is $" + accBalance + ".");
 					System.out.println("\nWhat would you like to do now?");
 				}
 				
-			// 2 - RECOVER USERNAME
+			// 2 - WITHDRAW
 				case "2": {
+					System.out.println("You have chosen to withdraw funds. How much would you like to withdraw?");
+					withdrawDeposit = scannerNumber.nextDouble();
 					
+					if (withdrawDeposit > accBalance) {
+						System.out.println("I'm sorry, you do not have enough funds in your account to make that withdrawal.");
+					}
+					else {
+						accBalance = accBalance - withdrawDeposit;
+						System.out.println("Withdrawal completed. Your new account balance is $" + accBalance);
+						System.out.println("\nWhat would you like to do now?");
+					}
 				}
 				
-			// 3 - RECOVER PASSWORD
+			// 3 - DEPOSIT
 				case "3": {
-					
+					System.out.println("You have chosen to deposit funds. How much would you like to deposit?");
+					withdrawDeposit = scannerNumber.nextDouble();
+					accBalance = accBalance + withdrawDeposit;
+					System.out.println("Deposit completed. Your new account balance is $" + accBalance);
+					System.out.println("\nWhat would you like to do now?");
 				}
 				
 			// 4 - PAY BILLS/OVERDRAFT FEES
 				case "4": {
+					
 					
 				}
 			// 5 - TRANSFER MONEY TO ANOTHER ACC

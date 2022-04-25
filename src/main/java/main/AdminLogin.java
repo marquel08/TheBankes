@@ -1,6 +1,8 @@
 package main;
 
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AdminLogin {
 	
@@ -8,8 +10,13 @@ public class AdminLogin {
 	static String scannerCheck;
 	static int scannerNumber;
 	
+	
+	
+	
+	
+	
 	public static void adminScreen() {
-System.out.println("Please enter one of the following commands: ");
+		System.out.println("Please enter one of the following commands: ");
 		
 		do {
 			System.out.println("1 - MANAGE USERS"
@@ -28,6 +35,8 @@ System.out.println("Please enter one of the following commands: ");
 				
 			// 2 - VIEW ACCs
 				case "2": {
+					
+					
 					
 				}
 				

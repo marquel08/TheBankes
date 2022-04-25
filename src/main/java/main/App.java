@@ -1,5 +1,7 @@
 package main;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
@@ -19,6 +21,19 @@ public class App {
 	
 
 	public static void main(String[] args) {
+		
+		// Hard-coded values; replace with DB values
+		BankAccount adminOne = new BankAccount("admin1", "admin123!", "admin1@email.com", "Admin", "1", "Admin");
+		BankAccount adminTwo = new BankAccount("admin2", "admin123!", "admin2@email.com", "Admin", "2", "Admin");
+		BankAccount accOne = new BankAccount("jakedoe12", "password123!", "jakedoe12@email.com", "Jake", "Doe", "Normal");
+		BankAccount accTwo = new BankAccount("janedoe13", "pass123!", "janedoe13@email.com", "Jane", "Doe", "Premium");
+		
+		List<BankAccount> Accounts = new ArrayList<BankAccount>();
+		Accounts.add(adminOne);
+		Accounts.add(adminTwo);
+		Accounts.add(accOne);
+		Accounts.add(accTwo);
+		
 		
 		System.out.println("Welcome to The Bankers banking application! You need to login to use this application. Please enter the corresponding numerical command to get started.");
 		
@@ -66,7 +81,7 @@ public class App {
 							}
 						}
 						
-					}while (!scannerCheck.equals(email) || !scannerCheck.equals(adminEmail));
+					}while (!scannerCheck.equals(username) || !scannerCheck.equals(adminUser));
 					
 					
 				}
@@ -74,11 +89,17 @@ public class App {
 			// 2 - RECOVER USERNAME
 				case "2": {
 					
+					System.out.println("\nPlease enter the email associated with the username.");
+					scannerCheck = scannerInput.nextLine();
+					System.out.println("Thank you. If you have an account associated with that email in our system, we will send an email shortly.");
+					
 				}
 				
 			// 3 - RECOVER PASSWORD
 				case "3": {
-					
+					System.out.println("\nPlease enter the username associated with the password.");
+					scannerCheck = scannerInput.nextLine();
+					System.out.println("Thank you. If you have an account associated with that email in our system, we will send an email shortly.");
 				}
 				
 			// 4 - CREATE ACC
