@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>BankingApp</name>
+	<name>server</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -22,7 +22,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1651542632839</id>
+			<id>1651542632774</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
