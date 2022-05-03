@@ -1,9 +1,9 @@
-package com.service;
+package com.bankingapp.backend.service;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.model.User;
+import com.bankingapp.backend.model.User;
 
 public interface UserService {
 

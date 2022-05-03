@@ -1,4 +1,4 @@
-package com.service.implement;
+package com.bankingapp.backend.service.implement;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,9 +8,9 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.model.User;
-import com.repository.UserRepository;
-import com.service.UserService;
+import com.bankingapp.backend.model.User;
+import com.bankingapp.backend.repository.UserRepository;
+import com.bankingapp.backend.service.UserService;
 
 @Service
 public class UserServiceImplement implements UserService {

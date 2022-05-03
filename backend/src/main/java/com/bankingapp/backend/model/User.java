@@ -1,4 +1,4 @@
-package com.model;
+package com.bankingapp.backend.model;
 
 import java.util.Objects;
 
@@ -18,10 +18,10 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column (name = "FIRST NAME")
+	@Column (name = "FIRST_NAME")
 	private String firstName;
 	
-	@Column (name = "LAST NAME")
+	@Column (name = "LAST_NAME")
 	private String lastName;
 	
 	@Column (name = "AGE")

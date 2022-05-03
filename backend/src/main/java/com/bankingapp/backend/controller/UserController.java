@@ -1,4 +1,4 @@
-package com.controller;
+package com.bankingapp.backend.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.model.User;
-import com.service.UserService;
+import com.bankingapp.backend.model.User;
+import com.bankingapp.backend.service.UserService;
 
 @RestController
 @RequestMapping("/api/users")
