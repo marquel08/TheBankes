@@ -1,5 +1,6 @@
 package com.bankingapp.backend.model;
 
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -30,22 +31,29 @@ public class User {
 	@Column (name = "CITY")
 	private String city;
 	
+	@Column
+	private List<Transaction> transaction;
+	
 	public User() {
 		super();
 	}
 	
-	
 
-	public User(Long id, String firstName, String lastName, Integer age, String city) {
+	public User(Long id, String firstName, String lastName, Integer age, String city, List<Transaction> transaction) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
 		this.city = city;
+		this.transaction = transaction;
 	}
 
-	
+
+
+
+
+
 
 	public Long getId() {
 		return id;

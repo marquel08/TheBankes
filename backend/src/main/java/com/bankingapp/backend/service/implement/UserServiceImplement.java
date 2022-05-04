@@ -22,19 +22,19 @@ public class UserServiceImplement implements UserService {
 	@Autowired
 	private UserRepository userRepository;
 	
-	static {
-		User user = new User(COUNTER++,  "Homer", "Simpson", 49, "Springfield");
-		usersList.add(user);
-		
-		user = new User(COUNTER++, "Marge", "Simpson", 48, "Springfield");
-		usersList.add(user);
-		
-		user = new User(COUNTER++, "Michael", "Scott", 50, "Scranton");
-		usersList.add(user);
-		
-		user = new User(COUNTER++, "Dwight", "Schrute", 40, "Scranton");
-		usersList.add(user);
-	}
+//	static {
+//		User user = new User(COUNTER++,  "Homer", "Simpson", 49, "Springfield");
+//		usersList.add(user);
+//		
+//		user = new User(COUNTER++, "Marge", "Simpson", 48, "Springfield");
+//		usersList.add(user);
+//		
+//		user = new User(COUNTER++, "Michael", "Scott", 50, "Scranton");
+//		usersList.add(user);
+//		
+//		user = new User(COUNTER++, "Dwight", "Schrute", 40, "Scranton");
+//		usersList.add(user);
+//	}
 
 	@Override
 	public List<User> findAll() {

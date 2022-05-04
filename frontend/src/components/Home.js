@@ -8,30 +8,30 @@ import MainPage from "./MainPage";
  * 
  * http://serveripaddress:portonwhichserverisrunning/resource
  */
-function Home(){
+function Home() {
     return (
         <>
-        <Header>
-       
-            <nav>
-          
-            <ul>
-                <li>
+            <Header>
 
-                    
-                    <Link to="/SignUp"> Signup</Link>
-                    <Link to="/AdminLogin"> AdminLogin</Link>
-                    
+                <nav>
 
-                </li>
-               
-            </ul>
-            </nav>
-</Header>
+                    <ul>
+                        <li>
+
+
+                            <Link to="/SignUp"> Signup</Link>
+                            <Link to="/AdminLogin"> AdminLogin</Link>
+
+
+                        </li>
+
+                    </ul>
+                </nav>
+            </Header>
 
             <form className="container">
                 <h3>Sign In</h3>
-              
+
                 <div className="form-group">
                     <label>Email address</label>
                     <input type="email" className="form-control" placeholder="Enter email" />
@@ -46,16 +46,13 @@ function Home(){
                         <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
                     </div>
                 </div>
-                <button type="submit" className="btn btn-primary btn-block">Submit</button>
-                <p className="forgot-password text-right">
-                    Forgot <a href="./MainPage">password?</a>
-                </p>
+                <button type="submit" formAction="/MainPage" className="btn btn-primary btn-block">Submit</button>
 
-             
+
             </form>
-           
-  
-        <Footer/>
+
+
+            <Footer />
         </>
     );
 }

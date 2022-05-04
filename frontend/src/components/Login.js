@@ -3,21 +3,21 @@ import React from "react";
 import Footer from "./Footer";
 
 
-function Login(){
-return (
-    
-  <div>
+function Login() {
+    return (
 
-    
-  <nav>
- 
-          <Link to="/Home"> Home</Link>
- 
-  </nav>
-  
+        <div>
 
 
-  <form>
+            <nav>
+
+                <Link to="/Home"> Home</Link>
+
+            </nav>
+
+
+
+            <form>
                 <h3 >Sign In</h3>
                 <div className="form-group">
                     <label>Email address</label>
@@ -33,14 +33,11 @@ return (
                         <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
                     </div>
                 </div>
-                <button type="submit" className="btn btn-primary btn-block">Submit</button>
-                <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
-                </p>
+                <button type="submit" formAction="/MainPage" className="btn btn-primary btn-block">Submit</button>
             </form>
-  <Footer/>
-</div>
-)
+            <Footer />
+        </div>
+    )
 }
 
 export default Login;
