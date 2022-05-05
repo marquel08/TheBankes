@@ -9,7 +9,7 @@ public interface UserService {
 
 	public List<User> findAll();
 	
-	public Optional<User> findById(Long id);
+	public Optional<User> findByEmail(String email);
 	
 	public void add(User user);
 	

@@ -31,9 +31,9 @@ public class UserController {
 		return new ResponseEntity<List<User>>(userService.findAll(), HttpStatus.OK);
 	}
 	
-	@GetMapping("/{id}")
-	public ResponseEntity<?> findById(@PathVariable Long id) {
-		Optional<User> userOpt = userService.findById(id);
+	@GetMapping("/{email}")
+	public ResponseEntity<?> findById(@PathVariable String email) {
+		Optional<User> userOpt = userService.findByEmail(email);
 		
 		if (userOpt.isPresent()) {
 			return new ResponseEntity<User>(userOpt.get(), HttpStatus.OK);

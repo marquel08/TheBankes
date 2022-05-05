@@ -27,15 +27,18 @@ public class BankAccount {
     private String lastName;
     @Column(name = "ACCTYPE")
     private String accType;
+    @Column(name = "ISADMIN")
+    private boolean isAdmin;
 
     public BankAccount(String username, String password, String email, String firstName, String lastName,
-            String accType) {
+            String accType, boolean isAdmin) {
         this.username = username;
         this.password = password;
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
         this.accType = accType;
+        this.isAdmin = isAdmin;
     }
 
     // GETTER & SETTER - USERNAME
@@ -91,11 +94,20 @@ public class BankAccount {
     public void setAccType(String accType) {
         this.accType = accType;
     }
+    
+    // GETTER & SETTER -  IS ADMIN?
+    public boolean getIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(boolean isAdmin) {
+        this.isAdmin = isAdmin;
+    }
 
     @Override
     public String toString() {
         return "[USERNAME: " + username + "\nPASSWORD: " + password + "\nEMAIL: " + email + "\nFIRST NAME: " + firstName
-                + "\nLAST NAME: " + lastName + "\nACCOUNT TYPE: " + accType + "]";
+                + "\nLAST NAME: " + lastName + "\nACCOUNT TYPE: " + accType + + "\nIS AN ADMIN?: " + isAdmin + "]";
     }
 
 }
