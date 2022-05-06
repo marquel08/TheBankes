@@ -1,0 +1,45 @@
+#adminBody {
+    background: url(../assets/adminBg.png) no-repeat;
+    background-size: 100%;
+}
+
+.bBox {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border: 1px dashed black;
+    width: 80%;
+    margin: auto;
+}
+
+.actionLabel {
+    font-size: 20px;
+}
+
+hr {
+    width: 25%;
+}
+
+.actBtn {
+    background-color: #223D84;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#headerAdmin {
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(90deg, white, white, #F0F8FF);
+    list-style: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 20px
+}
+
+#headerAdmin li {
+    padding: 0px 10px;
+    display: inline;
+    color: black;
+}

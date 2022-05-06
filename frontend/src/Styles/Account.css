@@ -1,0 +1,51 @@
+#welcomeMsg {
+    text-align: center;
+    padding: 20px;
+}
+
+#accBody {
+    background: url(../assets/loginBg.png) no-repeat;
+    background-size: 100%;
+}
+
+.aBox {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border: 1px dashed black;
+    width: 80%;
+    margin: auto;
+}
+
+.balanceLabel {
+    font-size: 20px;
+}
+
+hr {
+    width: 25%;
+}
+
+.accBtn {
+    float: right;
+    background-color: #223D84;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#headerLogin {
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(90deg, white, white, #F0F8FF);
+    list-style: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 20px
+}
+
+#headerLogin li {
+    padding: 0px 10px;
+    display: inline;
+    color: black;
+}
