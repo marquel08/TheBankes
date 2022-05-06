@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import Header from "./Header";
 import MainPage from "./MainPage";
+import { useState, useEffect } from 'react';
 /**
  * Link is used to set the URL and keep track of brwosing history
  * Outlet - renders the current route selected
@@ -9,6 +10,14 @@ import MainPage from "./MainPage";
  * http://serveripaddress:portonwhichserverisrunning/resource
  */
 function Home() {
+    const [users, setUsers] = useState([]);
+    const [email, setEmail] = useState('');
+
+    useEffect(() => { loginSubmit().then(users => setUsers(users)) });
+
+    function loginSubmit(email) {
+        return fetch('/api/' + email).then(data => data.json());
+    }
     return (
         <>
             <Header>
@@ -34,7 +43,7 @@ function Home() {
 
                 <div className="form-group">
                     <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
+                    <input type="email" onChange={event => setEmail(event.target.value)} className="form-control" placeholder="Enter email" />
                 </div>
                 <div className="form-group">
                     <label>Password</label>

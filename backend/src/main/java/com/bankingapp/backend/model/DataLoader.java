@@ -25,16 +25,16 @@ public class DataLoader implements CommandLineRunner {
 	}
 
 	private void loadData() {
-		// Transaction transaction1 = new()
-		List<Transaction> transactions = new ArrayList<>();
-		User user1 = new User(1L, "Homer", "Simpson", 49, "Springfield", transactions);
+		// // Transaction transaction1 = new()
+		// List<Transaction> transactions = new ArrayList<>();
+		User user1 = new User(1L, "Homer", "Simpson", 49, "Springfield");
 		userService.add(user1);
-		User user2 = new User(2L, "Marge", "Simpson", 48, "Springfield", transactions);
-		userService.add(user1);
-		User user3 = new User(3L, "Michael", "Scott", 50, "Scranton", transactions);
-		userService.add(user1);
-		User user4 = new User(4L, "Dwight", "Schrute", 40, "Scranton", transactions);
-		userService.add(user1);
+		User user2 = new User(2L, "Marge", "Simpson", 48, "Springfield");
+		userService.add(user2);
+		User user3 = new User(3L, "Michael", "Scott", 50, "Scranton");
+		userService.add(user3);
+		User user4 = new User(4L, "Dwight", "Schrute", 40, "Scranton");
+		userService.add(user4);
 	}
 
 }

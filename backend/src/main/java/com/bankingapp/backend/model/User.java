@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -31,22 +32,21 @@ public class User {
 	@Column (name = "CITY")
 	private String city;
 	
-	@Column
-	private List<Transaction> transaction;
+//	@OneToMany(mappedBy = "user")
+//	private List<Transaction> transaction;
 	
 	public User() {
 		super();
 	}
 	
 
-	public User(Long id, String firstName, String lastName, Integer age, String city, List<Transaction> transaction) {
+	public User(Long id, String firstName, String lastName, Integer age, String city) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
 		this.city = city;
-		this.transaction = transaction;
 	}
 
 

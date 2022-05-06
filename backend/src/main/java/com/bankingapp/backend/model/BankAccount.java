@@ -28,6 +28,8 @@ public class BankAccount {
     @Column(name = "ACCTYPE")
     private String accType;
 
+    
+    protected BankAccount() {}
     public BankAccount(String username, String password, String email, String firstName, String lastName,
             String accType) {
         this.username = username;
