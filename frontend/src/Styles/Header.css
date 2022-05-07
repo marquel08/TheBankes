@@ -1,8 +1,8 @@
 #head {
-    height: 20%;
+    height:20% !important;
     width: 100%;
     background-color: #223D84;
-    color: white;
+    color: white !important;;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -12,7 +12,7 @@
 }
 
 #navBar {
-    list-style: none;
+    list-style-type: style none !important;;
     cursor: pointer;
     font-size: 20px;
 }

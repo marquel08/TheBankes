@@ -10,10 +10,20 @@ function Header() {
 
             <nav>
                 <ul id='navBar'>
-                    <li>Personal</li>
-                    <li>Commercial</li>
-                    <li>Business</li>
-                    <li>Contact Us</li>
+                    
+                    <li >
+                    <a href="./Personal">Personal</a>
+                   </li>
+                    <li>
+                    <a href="./Commercial">Commercial</a>
+                    </li>
+                    <li>
+                    <a href="./Business">Business</a> 
+                     </li>
+                    <li>
+                    <a href="./ContactUs">Contact Us</a> 
+                        
+                    </li>
                 </ul>
             </nav>
         </header>
