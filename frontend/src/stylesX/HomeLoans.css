@@ -1,0 +1,22 @@
+#loanBanner {
+    text-align: center;
+    padding: 20px;
+}
+
+#loanTitle {
+    font-size: 55px;
+    padding-top: 30px;
+}
+
+#loanBody {
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+}
+
+#loanBodyTitle {
+    color: white;
+    background: linear-gradient(90deg, #223D84, #223D84, #F0F8FF);
+    padding: 10px;
+    font-size: 40px;
+}

@@ -10,7 +10,6 @@
 #loginSection {
     background-color: #223D84;
     color: white;
-    width: 20%;
     padding: 20px;
     border: 5px outset white;
     float: right;
@@ -42,16 +41,17 @@
 
 #homeBG {
     background: url(../assets/homeBg.png) no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .blurbHome {
-    width: 60%;
     padding: 20px;
 }
 
 .blurbHome2 {
     padding: 20px;
+    background: url(../assets/homeBg2.jpg) no-repeat;
+    background-size: cover;
 }
 
 #header2 {
@@ -67,4 +67,51 @@
 #header2 li {
     padding: 0px 10px;
     display: inline;
+    color: black;
+}
+
+#header2 li:hover {
+    color: blue;
+}
+
+#clearBoth {
+    clear: both;
+}
+
+
+@media (max-width: 475px) {
+    #loginSection {
+        float: none;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    .blurbHome {
+        float: left;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .blurbHome {
+        width: 60%;
+    }
+}
+
+@media (max-width: 800px) {
+    .blurbHome {
+        word-wrap: break-word;
+    }
+}
+
+@media (min-width: 1500px) {
+    #loginSection {
+        width: 20%;
+    }
+}
+
+@media (max-width: 1500px) {
+    #loginSection {
+        width: 300px;
+    }
 }

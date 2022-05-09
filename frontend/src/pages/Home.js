@@ -9,9 +9,9 @@ function Home() {
         <>
         <div id='header2'>
             <ul>
-                <li>Credit Cards</li> |
-                <li>Home Loans</li> |
-                <li>Investment</li>
+                <Link to='/creditcards'><li>Credit Cards</li></Link> |
+                <Link to='/homeloans'><li>Home Loans</li></Link> |
+                <Link to='/investment'><li>Investment</li></Link>
             </ul>
         </div>
 
@@ -45,6 +45,8 @@ function Home() {
                     <p>Mutat aliquid referrentur eu vel. Ex mea maiorum atomorum patrioque, an unum luptatum sea, vis id meliore democritum. Debet semper dolorem ei duo, his alia clita persius ad. Verear mandamus pro te, harum partiendo forensibus ea usu. Illud causae tibique has cu, an mel magna feugait, meis deleniti constituam nam cu.</p>
                 </div>
             </div>
+
+            <div id='clearBoth'></div>
 
             <br/>
             <div className='blurbHome2'>
