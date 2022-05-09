@@ -1,0 +1,94 @@
+#head {
+    height: 20%;
+    width: 100%;
+    background-color: #223D84;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+}
+
+#navMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#burgerMenu {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+#burgerMenu:hover {
+    color: aqua;
+}
+
+#navBar {
+    list-style: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#navBar li {
+    padding: 0px 10px;
+    display: inline;
+}
+
+#navBar2 {
+    list-style: none;
+    cursor: pointer;
+    font-size: 20px;
+    height: 100%;
+    width: 30%;
+    background-color: #223D84;
+    color: white;
+    z-index: 101;
+    right: 0px;
+    position: absolute;
+    text-align: center;
+    display: none;
+}
+
+#navBar2 li {
+    padding: 10px;
+}
+
+#navBar2 li:hover {
+    background-color: aqua;
+    color: black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover, #navBar li:hover {
+    color: aqua;
+}
+
+@media (min-width: 800px) {
+    #burgerMenu {
+        display: none;
+    }
+
+    #navBar {
+        display: block;
+    }
+}
+
+@media (max-width: 800px) {
+    #burgerMenu {
+        display: block;
+    }
+
+    #navBar {
+        display: none;
+    }
+}

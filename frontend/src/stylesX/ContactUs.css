@@ -1,0 +1,44 @@
+#leftSide {
+    width: 50%;
+    margin: auto;    
+}
+
+#title, #desc {
+    text-align: center;
+    padding: 20px;
+}
+
+#desc {
+    font-size: 22px;
+}
+
+#response, #firstName1, #lastName1, #email1, #subject {
+    width: 100%;
+    font-size: 24px;
+}
+
+#response {
+    height: 200px;
+}
+
+#submit1 {
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 24px;
+    background-color: #223D84;
+    color: white;
+    cursor: pointer;
+}
+
+#contactInfo {
+    font-size: 30px;
+    margin: auto;
+    width: 50%;
+    padding-bottom: 3%;
+}
+
+#encompass {
+    background: url(../assets/contactUs.jpg) no-repeat;
+    background-size: cover;
+    background-color: #F0F8FF;
+}

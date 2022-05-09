@@ -1,0 +1,11 @@
+#investBody {
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#investTitle {
+    font-size: 60px;
+}

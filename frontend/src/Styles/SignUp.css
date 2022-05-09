@@ -1,0 +1,58 @@
+#signupBody {
+    background-color: #223D84;
+    color: white;
+    width: 60%;
+    margin: auto;
+    margin-top: 1%;
+    padding: 20px;
+}
+
+#signupBody a {
+    text-decoration: none;
+    color: white;
+}
+
+#signupBody a:hover {
+    color: aqua;
+}
+
+#signupForm {
+    text-align: center;
+}
+
+#loginLink {
+    padding-left: 10%;
+}
+
+#firstName, #lastName, #email, #passbox {
+    width: 80%;
+    font-size: 20px;
+    padding: 5px;
+}
+
+#registerBtn {
+    background-color: #223D84;
+    border: 2px solid white;
+    color: white;
+    padding: 5px 0px;
+    width: 80%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#registerInfo {
+    padding: 20px;
+    background: url(../assets/registerBg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    margin-top: 3%;
+}
+
+#blurb {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 60%;
+}

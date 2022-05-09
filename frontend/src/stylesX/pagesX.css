@@ -1,0 +1,45 @@
+.card {
+    display: flex;
+    padding: 20px;
+}
+
+.imgBox, .cardBox {
+    float: left;
+}
+
+.imgBox {
+    width: 50%;
+    height: 50%;
+}
+
+.cardTitle {
+    color: white;
+    background: linear-gradient(90deg, #223D84, #223D84, #F0F8FF);
+    padding: 10px;
+}
+
+.clearBoth {
+    clear: both;
+}
+
+@media (min-width: 800px) {
+    .imgBox {
+        display: block;
+    }
+
+    .cardBox {
+        width: 50%;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .imgBox {
+        display: none;
+    }
+
+    .cardBox {
+        width: 100%;
+        margin-left: 0px;
+    }
+}

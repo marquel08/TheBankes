@@ -1,0 +1,19 @@
+#creditCards {
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.creditCardInfo {
+    float: left;
+    width: 33%;
+    padding: 0px 30px;
+}
+
+#creditText {
+    padding: 20px;
+    background: url('../assets/cards.png');
+    background-size: cover;
+}
