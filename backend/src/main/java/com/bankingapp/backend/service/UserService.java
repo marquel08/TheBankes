@@ -18,4 +18,8 @@ public interface UserService {
 	public Optional<User> delete(Long id);
 
 	public Iterable<User> findById(List<User> users);
+
+	public User loginUser(String username, String password);
+
+	public void logoutUser(String username);
 }

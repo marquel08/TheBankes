@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import com.bankingapp.backend.model.User;
 import com.bankingapp.backend.service.UserService;
@@ -65,6 +66,23 @@ public class UserController {
 		
 		return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
+	}
+	
+	//login
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@CrossOrigin(origins = "http://localhost:3000")
+	public ResponseEntity<User> loginUser(@RequestParam String username, @RequestParam String password) {
+		User user = userService.loginUser(username, password);
+		return ResponseEntity.ok(user);
+	}
+	
+	//logout
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	@CrossOrigin(origins = "http://localhost:3000")
+	public ResponseEntity<String> logoutUser(@RequestParam String username) {
+		userService.logoutUser(username);
+		return ResponseEntity.ok("You are now logged out");
+		
 	}
 	
 	
