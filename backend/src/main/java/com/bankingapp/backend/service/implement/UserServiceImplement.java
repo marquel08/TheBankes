@@ -95,6 +95,18 @@ public class UserServiceImplement implements UserService {
 		return null;
 	}
 
+	@Override
+	public User loginUser(String username, String password) {
+		
+		return null;
+	}
+
+	@Override
+	public void logoutUser(String username) {
+		
+		
+	}
+
 	
 
 }
