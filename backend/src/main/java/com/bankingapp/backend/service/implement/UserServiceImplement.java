@@ -14,13 +14,11 @@ import com.bankingapp.backend.service.UserService;
 
 @Service
 public class UserServiceImplement implements UserService {
-	
+
 	public static List<User> usersList = new ArrayList<>();
-	
-	
+
 	@Autowired
 	private UserRepository userRepository;
-	
 
 	@Override
 	public List<User> findAll() {
@@ -30,83 +28,79 @@ public class UserServiceImplement implements UserService {
 	@Override
 	public Optional<User> findById(Long id) {
 		return usersList.stream().filter(user -> user.getId() == id).findFirst();
-		
+
 	}
 
 	@Override
 	public void add(User user) {
 		userRepository.save(user);
-		
+
 	}
-	
+
 	@Override
 	public Optional<User> update(User user) {
 		Optional<User> userOpt = usersList.stream().filter(u -> u.getId() == user.getId()).findFirst();
-		
+
 		if (userOpt.isPresent()) {
 			User existingUser = userOpt.get();
-			
+
 			if (user.getEmail() != null) {
 				existingUser.setEmail(user.getEmail());
 			}
-			
+
 			if (user.getPassword() != null) {
 				existingUser.setPassword(user.getPassword());
 			}
-			
+
 			if (user.getFirstName() != null) {
 				existingUser.setFirstName(user.getFirstName());
 			}
-			
+
 			if (user.getLastName() != null) {
 				existingUser.setLastName(user.getLastName());
 			}
-			
-			
+
 			usersList = usersList
 					.stream()
 					.filter(u -> u.getId() != existingUser.getId())
 					.collect(Collectors.toList());
-			
+
 			usersList.add(existingUser);
-			
+
 			return Optional.of(existingUser);
 		}
-		
+
 		return Optional.empty();
-		
+
 	}
 
 	@Override
 	public Optional<User> delete(Long id) {
 		Optional<User> userOpt = userRepository.findById(id);
-		
-		if(userOpt.isPresent()) {
+
+		if (userOpt.isPresent()) {
 			userRepository.delete(userOpt.get());
 			return userOpt;
 		}
-		
+
 		return Optional.empty();
 	}
 
 	@Override
 	public Iterable<User> findById(List<User> users) {
-	
+
 		return null;
 	}
 
 	@Override
 	public User loginUser(String username, String password) {
-		
-		return null;
+
+		return userRepository.findUserByUsernameIgnoreCase(username);
 	}
 
 	@Override
 	public void logoutUser(String username) {
-		
-		
-	}
 
-	
+	}
 
 }
