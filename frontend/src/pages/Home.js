@@ -9,14 +9,15 @@ function Home() {
     const handleSubmit = (event) => {
         event.preventDefault();
         let { userID, password } = document.forms[0];
-        axios.post("http://localhost:8080/login", userID, password).then(response => {
+        console.log (userID);
+        axios.post("http://localhost:8080/login", {userID: userID.value, password: password.value}).then(response => {
             let userdata = response.data
             const userinfo = {
                 username: userdata.username,
-                id = userdata.id,
-                email = userdata.email,
-                firstName = userdata.firstName,
-                lastName = userdata.lastName
+                id: userdata.id,
+                email: userdata.email,
+                firstName: userdata.firstName,
+                lastName: userdata.lastName
             }
             document.cookie = `user_token=${userinfo}`;
         })
@@ -40,7 +41,7 @@ function Home() {
                         <br /><br />
                         <span class='loginIcon'><FontAwesomeIcon icon={faKey} /> &nbsp;</span> <input type='password' name="password" id='password' placeholder='Password' required />
                         <br /><br />
-                        <input type='submit' id='submitBtn' value='Sign In' onSubmit={handleSubmit} />
+                        <input type='submit' id='submitBtn' value='Sign In' onClick={handleSubmit} />
                     </form>
                     <br />
                     <Link to='/signup'>Not enrolled? Sign up now →</Link>

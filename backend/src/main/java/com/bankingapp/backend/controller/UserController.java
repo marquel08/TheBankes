@@ -23,10 +23,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.bankingapp.backend.model.User;
 import com.bankingapp.backend.service.UserService;
 
-@CrossOrigin(origins = "http://localhost:8081")
+
 
 @RestController
-@RequestMapping("/api")
 public class UserController {
 
 	@Autowired
@@ -68,15 +67,15 @@ public class UserController {
 
 	// login
 	@PostMapping(value = "/login")
-	@CrossOrigin(origins = "http://localhost:3000")
-	public ResponseEntity<User> loginUser(@RequestBody String username, @RequestBody String password) {
+	//@CrossOrigin(origins = "http://localhost:3000")
+	public User loginUser(@RequestBody String username, String password) {
 		User user = userService.loginUser(username, password);
-		return ResponseEntity.ok(user);
+		return user;
 	}
 
 	// logout
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	@CrossOrigin(origins = "http://localhost:3000")
+	//@CrossOrigin(origins = "http://localhost:3000")
 	public ResponseEntity<String> logoutUser(@RequestParam String username) {
 		userService.logoutUser(username);
 		return ResponseEntity.ok("You are now logged out");

@@ -1,6 +1,6 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import axios from './axios';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 import Header from './Components/Header';
 import Footer from './Components/Footer';
@@ -22,7 +22,7 @@ import Investment from './pagesX/Investment';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <Router>
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -38,7 +38,7 @@ function App() {
           <Route path='/investment' element={<Investment />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </Router>
 
     </>
   );
