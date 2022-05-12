@@ -1,16 +1,18 @@
 import React from "react";
 import '../Styles/Home.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faKey } from '@fortawesome/free-solid-svg-icons';
 import axios from "axios";
 
 function Home() {
+
+    const Navigate = useNavigate()
     const handleSubmit = (event) => {
         event.preventDefault();
         let { userID, password } = document.forms[0];
-        console.log (userID);
-        axios.post("http://localhost:8080/login", {userID: userID.value, password: password.value}).then(response => {
+        console.log(userID);
+        axios.post("http://localhost:8080/login", { userID: userID.value, password: password.value }).then(response => {
             let userdata = response.data
             const userinfo = {
                 username: userdata.username,
@@ -21,6 +23,7 @@ function Home() {
             }
             document.cookie = `user_token=${userinfo}`;
         })
+        Navigate("/account")
     }
     return (
         <>
@@ -42,6 +45,7 @@ function Home() {
                         <span class='loginIcon'><FontAwesomeIcon icon={faKey} /> &nbsp;</span> <input type='password' name="password" id='password' placeholder='Password' required />
                         <br /><br />
                         <input type='submit' id='submitBtn' value='Sign In' onClick={handleSubmit} />
+
                     </form>
                     <br />
                     <Link to='/signup'>Not enrolled? Sign up now →</Link>
